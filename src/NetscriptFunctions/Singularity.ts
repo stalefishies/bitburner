@@ -329,22 +329,24 @@ export function NetscriptSingularity(): InternalAPI<ISingularity> {
 
         let task: ClassType;
         switch (className.toLowerCase()) {
-          case "Study Computer Science".toLowerCase():
+          case "study computer science":
+          case "studycomputerscience":
             task = ClassType.StudyComputerScience;
             break;
-          case "Data Structures".toLowerCase():
+          case "data structures":
+          case "datastructures":
             task = ClassType.DataStructures;
             break;
-          case "Networks".toLowerCase():
+          case "networks":
             task = ClassType.Networks;
             break;
-          case "Algorithms".toLowerCase():
+          case "algorithms":
             task = ClassType.Algorithms;
             break;
-          case "Management".toLowerCase():
+          case "management":
             task = ClassType.Management;
             break;
-          case "Leadership".toLowerCase():
+          case "leadership":
             task = ClassType.Leadership;
             break;
           default:
@@ -439,26 +441,30 @@ export function NetscriptSingularity(): InternalAPI<ISingularity> {
         }
 
         switch (stat.toLowerCase()) {
-          case "strength".toLowerCase():
-          case "str".toLowerCase():
+          case "gymstrength":
+          case "strength":
+          case "str":
             player.startWork(
               new ClassWork({ classType: ClassType.GymStrength, location: player.location, singularity: true }),
             );
             break;
-          case "defense".toLowerCase():
-          case "def".toLowerCase():
+          case "gymdefense":
+          case "defense":
+          case "def":
             player.startWork(
               new ClassWork({ classType: ClassType.GymDefense, location: player.location, singularity: true }),
             );
             break;
-          case "dexterity".toLowerCase():
-          case "dex".toLowerCase():
+          case "gymdexterity":
+          case "dexterity":
+          case "dex":
             player.startWork(
               new ClassWork({ classType: ClassType.GymDexterity, location: player.location, singularity: true }),
             );
             break;
-          case "agility".toLowerCase():
-          case "agi".toLowerCase():
+          case "gymagility":
+          case "agility":
+          case "agi":
             player.startWork(
               new ClassWork({ classType: ClassType.GymAgility, location: player.location, singularity: true }),
             );
